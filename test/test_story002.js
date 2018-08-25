@@ -35,7 +35,7 @@ contract('MediaStore', function (accounts) {
         ms = await MediaStore.new();
 
         console.log('****************THE PROPERTY OWNERSHIP****************************')
-        console.log('Welcome to Adhat Story Part 001!')
+        console.log('Welcome to Adhat Story Part 002!')
         console.log('The story depicts following feature of application : UPLOAD -> SALE -> BUY -> RESALE -> TRACK')
         console.log('Actors of this story are :: ...........')
         console.log('Alice - a content owner.')
