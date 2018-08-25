@@ -1,0 +1,1159 @@
+{
+  "contractName": "MediaLib",
+  "abi": [],
+  "bytecode": "0x604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820965e4417cb69dfd84817c47ec470065a5d19b2a42c593edde7415d0c82c9174d0029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820965e4417cb69dfd84817c47ec470065a5d19b2a42c593edde7415d0c82c9174d0029",
+  "sourceMap": "26:599:0:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
+  "deployedSourceMap": "26:599:0:-;;;;;;;;",
+  "source": "pragma solidity  ^0.4.2;\n\nlibrary MediaLib {\n    enum ContentTypes { CONFDOC, IMAGE, MUSIC, VID }\n    \n    struct Media {\n        address creator;\n        address currentOwner;\n        string id;\n        uint32 claps;\n        bool exists;\n        bool forSale;\n        bool isSold;\n        uint8 resaleCnt;\n        uint256 price;\n        ContentTypes cntType;\n    }\n    \n    struct Buy {\n        address buyer;\n        uint256 buyingTime;\n        uint256 buyingPrice;\n    }\n        \n    struct User {\n        bool exists;\n        string name ;\n        string [] myUploadedCntLst;\n        string [] myBoughtCntLst;\n    }    \n}\n",
+  "sourcePath": "/home/vishwasb/vab/hypermine/adhat-contracts/contracts/MediaLib.sol",
+  "ast": {
+    "absolutePath": "/home/vishwasb/vab/hypermine/adhat-contracts/contracts/MediaLib.sol",
+    "exportedSymbols": {
+      "MediaLib": [
+        46
+      ]
+    },
+    "id": 47,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 46,
+        "linearizedBaseContracts": [
+          46
+        ],
+        "name": "MediaLib",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "MediaLib.ContentTypes",
+            "id": 6,
+            "members": [
+              {
+                "id": 2,
+                "name": "CONFDOC",
+                "nodeType": "EnumValue",
+                "src": "69:7:0"
+              },
+              {
+                "id": 3,
+                "name": "IMAGE",
+                "nodeType": "EnumValue",
+                "src": "78:5:0"
+              },
+              {
+                "id": 4,
+                "name": "MUSIC",
+                "nodeType": "EnumValue",
+                "src": "85:5:0"
+              },
+              {
+                "id": 5,
+                "name": "VID",
+                "nodeType": "EnumValue",
+                "src": "92:3:0"
+              }
+            ],
+            "name": "ContentTypes",
+            "nodeType": "EnumDefinition",
+            "src": "49:48:0"
+          },
+          {
+            "canonicalName": "MediaLib.Media",
+            "id": 27,
+            "members": [
+              {
+                "constant": false,
+                "id": 8,
+                "name": "creator",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "130:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 7,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "130:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 10,
+                "name": "currentOwner",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "155:20:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "155:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 12,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "185:9:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "185:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14,
+                "name": "claps",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "204:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 13,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "204:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 16,
+                "name": "exists",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "226:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 15,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "226:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18,
+                "name": "forSale",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "247:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 17,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "247:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 20,
+                "name": "isSold",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "269:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 19,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "269:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 22,
+                "name": "resaleCnt",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "290:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 21,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "290:5:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 24,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "315:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 23,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "315:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26,
+                "name": "cntType",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "338:20:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_ContentTypes_$6",
+                  "typeString": "enum MediaLib.ContentTypes"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 25,
+                  "name": "ContentTypes",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 6,
+                  "src": "338:12:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ContentTypes_$6",
+                    "typeString": "enum MediaLib.ContentTypes"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Media",
+            "nodeType": "StructDefinition",
+            "scope": 46,
+            "src": "107:258:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MediaLib.Buy",
+            "id": 34,
+            "members": [
+              {
+                "constant": false,
+                "id": 29,
+                "name": "buyer",
+                "nodeType": "VariableDeclaration",
+                "scope": 34,
+                "src": "396:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 28,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "396:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 31,
+                "name": "buyingTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 34,
+                "src": "419:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 30,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "419:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33,
+                "name": "buyingPrice",
+                "nodeType": "VariableDeclaration",
+                "scope": 34,
+                "src": "447:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 32,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "447:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Buy",
+            "nodeType": "StructDefinition",
+            "scope": 46,
+            "src": "375:98:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MediaLib.User",
+            "id": 45,
+            "members": [
+              {
+                "constant": false,
+                "id": 36,
+                "name": "exists",
+                "nodeType": "VariableDeclaration",
+                "scope": 45,
+                "src": "509:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 35,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "509:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 38,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 45,
+                "src": "530:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 37,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "530:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41,
+                "name": "myUploadedCntLst",
+                "nodeType": "VariableDeclaration",
+                "scope": 45,
+                "src": "552:26:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 39,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "552:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 40,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "552:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 44,
+                "name": "myBoughtCntLst",
+                "nodeType": "VariableDeclaration",
+                "scope": 45,
+                "src": "588:24:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 42,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "588:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 43,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "588:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "User",
+            "nodeType": "StructDefinition",
+            "scope": 46,
+            "src": "487:132:0",
+            "visibility": "public"
+          }
+        ],
+        "scope": 47,
+        "src": "26:599:0"
+      }
+    ],
+    "src": "0:626:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/vishwasb/vab/hypermine/adhat-contracts/contracts/MediaLib.sol",
+    "exportedSymbols": {
+      "MediaLib": [
+        46
+      ]
+    },
+    "id": 47,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 46,
+        "linearizedBaseContracts": [
+          46
+        ],
+        "name": "MediaLib",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "MediaLib.ContentTypes",
+            "id": 6,
+            "members": [
+              {
+                "id": 2,
+                "name": "CONFDOC",
+                "nodeType": "EnumValue",
+                "src": "69:7:0"
+              },
+              {
+                "id": 3,
+                "name": "IMAGE",
+                "nodeType": "EnumValue",
+                "src": "78:5:0"
+              },
+              {
+                "id": 4,
+                "name": "MUSIC",
+                "nodeType": "EnumValue",
+                "src": "85:5:0"
+              },
+              {
+                "id": 5,
+                "name": "VID",
+                "nodeType": "EnumValue",
+                "src": "92:3:0"
+              }
+            ],
+            "name": "ContentTypes",
+            "nodeType": "EnumDefinition",
+            "src": "49:48:0"
+          },
+          {
+            "canonicalName": "MediaLib.Media",
+            "id": 27,
+            "members": [
+              {
+                "constant": false,
+                "id": 8,
+                "name": "creator",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "130:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 7,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "130:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 10,
+                "name": "currentOwner",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "155:20:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "155:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 12,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "185:9:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "185:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14,
+                "name": "claps",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "204:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 13,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "204:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 16,
+                "name": "exists",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "226:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 15,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "226:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18,
+                "name": "forSale",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "247:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 17,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "247:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 20,
+                "name": "isSold",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "269:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 19,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "269:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 22,
+                "name": "resaleCnt",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "290:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 21,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "290:5:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 24,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "315:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 23,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "315:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26,
+                "name": "cntType",
+                "nodeType": "VariableDeclaration",
+                "scope": 27,
+                "src": "338:20:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_ContentTypes_$6",
+                  "typeString": "enum MediaLib.ContentTypes"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 25,
+                  "name": "ContentTypes",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 6,
+                  "src": "338:12:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ContentTypes_$6",
+                    "typeString": "enum MediaLib.ContentTypes"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Media",
+            "nodeType": "StructDefinition",
+            "scope": 46,
+            "src": "107:258:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MediaLib.Buy",
+            "id": 34,
+            "members": [
+              {
+                "constant": false,
+                "id": 29,
+                "name": "buyer",
+                "nodeType": "VariableDeclaration",
+                "scope": 34,
+                "src": "396:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 28,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "396:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 31,
+                "name": "buyingTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 34,
+                "src": "419:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 30,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "419:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33,
+                "name": "buyingPrice",
+                "nodeType": "VariableDeclaration",
+                "scope": 34,
+                "src": "447:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 32,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "447:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Buy",
+            "nodeType": "StructDefinition",
+            "scope": 46,
+            "src": "375:98:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MediaLib.User",
+            "id": 45,
+            "members": [
+              {
+                "constant": false,
+                "id": 36,
+                "name": "exists",
+                "nodeType": "VariableDeclaration",
+                "scope": 45,
+                "src": "509:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 35,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "509:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 38,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 45,
+                "src": "530:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 37,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "530:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41,
+                "name": "myUploadedCntLst",
+                "nodeType": "VariableDeclaration",
+                "scope": 45,
+                "src": "552:26:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 39,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "552:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 40,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "552:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 44,
+                "name": "myBoughtCntLst",
+                "nodeType": "VariableDeclaration",
+                "scope": 45,
+                "src": "588:24:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                  "typeString": "string[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 42,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "588:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "id": 43,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "588:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                    "typeString": "string[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "User",
+            "nodeType": "StructDefinition",
+            "scope": 46,
+            "src": "487:132:0",
+            "visibility": "public"
+          }
+        ],
+        "scope": 47,
+        "src": "26:599:0"
+      }
+    ],
+    "src": "0:626:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-08-25T05:40:04.320Z"
+}
