@@ -50,21 +50,27 @@
     
     ` npm i -g truffle  `
 
-2. Update node modules
+2. Clone this repository 
+
+    ` git clone https://github.com/hypermine-bc/adhat-contracts.git`
+
+3. Navigate to folder `adhat-contracts`
+
+4. Update node modules
 
     ` npm i`
 
-3. Run truffle in develop mode 
+5. Run truffle in develop mode 
 
     ` truffle develop `
 
     truffle console will be open now
 
-4. Compile contracts inside truffle console
+6. Compile contracts inside truffle console
 
     ` compile `
 
-5. Execute test cases inside truffle console
+7. Execute test cases inside truffle console
 
     ` test `
 
