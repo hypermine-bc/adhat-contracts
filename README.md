@@ -16,7 +16,10 @@
 
  *Note : Same story can be applied to car owner ship, flat ownership etc.*
 
-### Test Cases
+### Test Cases Result
+
+![story001](https://github.com/hypermine-bc/adhat-contracts/blob/master/test-cases-assets/test_story001.png)
+
 
 ## Story 002
 
@@ -36,7 +39,7 @@
 
  *Note : Same story can be applied to car owner ship, flat ownership etc.*
 
-### Test Cases
+### Test Cases Result
 
- 
+![story002](https://github.com/hypermine-bc/adhat-contracts/blob/master/test-cases-assets/test_story002.png)
  
