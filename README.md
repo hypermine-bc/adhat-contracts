@@ -43,3 +43,28 @@
 
 ![story002](https://github.com/hypermine-bc/adhat-contracts/blob/master/test-cases-assets/test_story002.png)
  
+
+# Installation and Execution
+
+1. Install truffle
+    
+    ` npm i -g truffle  `
+
+2. Update node modules
+
+    ` npm i`
+
+3. Run truffle in develop mode 
+
+    ` truffle develop `
+
+    truffle console will be open now
+
+4. Compile contracts inside truffle console
+
+    ` compile `
+
+5. Execute test cases inside truffle console
+
+    ` test `
+
